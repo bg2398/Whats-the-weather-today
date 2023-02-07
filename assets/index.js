@@ -13,21 +13,24 @@ $('.search').on("click", function (event) {
 	if (city === "") {
 		return;
 	};
+    //PUSH is adding city
 	cityHist.push(city);
-
+//local storage
 	localStorage.setItem('city', JSON.stringify(cityHist));
 	fiveForecastEl.empty();
 	getHistory();
 	getWeatherToday();
 });
-
+// creating variable for history
 //save entered cities in the search bar
 var contHistEl = $('.cityHist');
 function getHistory() {
 	contHistEl.empty();
 
 	for (let i = 0; i < cityHist.length; i++) {
-
+        //console logged to verify cityHist loop is functioning
+// console.log(cityHist)
+// adding searched cities and turningn them into butons while also increasing searched cities
 		var rowEl = $('<row>');
 		var btnEl = $('<button>').text(`${cityHist[i]}`)
 
@@ -51,12 +54,12 @@ function getHistory() {
 
 
 var cardTodayBody = $('.cardBodyToday')
-//Launch week forecast
+//Launch week forecast with open weather link and insert key Var 
 function getWeatherToday() {
 	var getUrlCurrent = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${key}`;
 
 	$(cardTodayBody).empty();
-
+//using ajax to get data from the server
 	$.ajax({
 		url: getUrlCurrent,
 		method: 'GET',
@@ -115,7 +118,7 @@ var fiveForecastEl = $('.fiveForecast');
 
 function getFiveDayForecast() {
 	var getUrlFiveDay = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${key}`;
-
+//using ajax to retrieve url data from the server
 	$.ajax({
 		url: getUrlFiveDay,
 		method: 'GET',
@@ -137,12 +140,12 @@ function getFiveDayForecast() {
 				myWeather.push(testObj);
 			}
 		})
-		
+		//adding loop for 5 day forecast cards
 		for (let i = 0; i < myWeather.length; i++) {
 
 			var divElCard = $('<div>');
 			divElCard.attr('class', 'card text-white bg-primary mb-3 cardOne');
-			divElCard.attr('style', 'max-width: 200px;');
+			divElCard.attr('style', 'max-width: 300px;');
 			fiveForecastEl.append(divElCard);
 
 			var divElHeader = $('<div>');
@@ -160,7 +163,7 @@ function getFiveDayForecast() {
 			divElIcon.attr('src', `https://openweathermap.org/img/wn/${myWeather[i].icon}@2x.png`);
 			divElBody.append(divElIcon);
 
-			//Temp section
+			//Temp section using JQUERY using created Variable "myWeather"
 			var pElTemp = $('<p>').text(`Temperature: ${myWeather[i].temp} °F`);
 			divElBody.append(pElTemp);
 			//Feels Like section
@@ -173,7 +176,7 @@ function getFiveDayForecast() {
 	});
 };
 
-//Local Storage to save imputs
+//Local Storage for searched imputs.
 function initLoad() {
 
 	var cityHistStore = JSON.parse(localStorage.getItem('city'));
