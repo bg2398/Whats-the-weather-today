@@ -1,4 +1,5 @@
-var key = '64f2ee2a8261daa4d9f780f5b365f275';
+//My APIKEY from open weather
+var key = '98d816fd2db92d702f8ca33fe4d6b8f8';
 var city = "seattle"
 
 //date info
@@ -50,7 +51,7 @@ function getHistory() {
 
 
 var cardTodayBody = $('.cardBodyToday')
-//Launch 5day forecast
+//Launch week forecast
 function getWeatherToday() {
 	var getUrlCurrent = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${key}`;
 
