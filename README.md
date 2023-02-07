@@ -19,6 +19,6 @@ THEN I am again presented with current and future conditions for that city
 ![B542377E-E760-481C-B6AA-F903E9BF4F11_1_201_a](https://user-images.githubusercontent.com/117424603/217385102-e43fd4a1-076f-496d-9a92-d64f4ef8be0c.jpeg)
 
 # Links
-
-
+Site: https://bg2398.github.io/Whats-the-weather-today/
+GitHub: https://github.com/bg2398/Whats-the-weather-today
 Api Key: https://openweathermap.org/forecast5 
