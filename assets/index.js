@@ -139,6 +139,7 @@ function getFiveDayForecast() {
 			if (value.dt_txt.split(' ')[1] === "12:00:00") {
 				myWeather.push(testObj);
 			}
+            console.log(response)
 		})
 		//adding loop for 5 day forecast cards
 		for (let i = 0; i < myWeather.length; i++) {
@@ -162,6 +163,8 @@ function getFiveDayForecast() {
 			divElIcon.attr('class', 'icons');
 			divElIcon.attr('src', `https://openweathermap.org/img/wn/${myWeather[i].icon}@2x.png`);
 			divElBody.append(divElIcon);
+            //console logged 5 day body cards
+            console.log(response)
 
 			//Temp section using JQUERY using created Variable "myWeather"
 			var pElTemp = $('<p>').text(`Temperature: ${myWeather[i].temp} °F`);
