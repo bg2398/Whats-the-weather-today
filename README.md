@@ -21,5 +21,7 @@ THEN I am again presented with current and future conditions for that city
 
 # Links
 Site: https://bg2398.github.io/Whats-the-weather-today/
+
 GitHub: https://github.com/bg2398/Whats-the-weather-today
+
 Api Key: https://openweathermap.org/forecast5 
