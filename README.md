@@ -16,7 +16,8 @@ THEN I am again presented with current and future conditions for that city
 
 # Completed Site should look like this
 
-![B542377E-E760-481C-B6AA-F903E9BF4F11_1_201_a](https://user-images.githubusercontent.com/117424603/217385102-e43fd4a1-076f-496d-9a92-d64f4ef8be0c.jpeg)
+![image](https://user-images.githubusercontent.com/117424603/217414415-02fffe0b-cd08-48a1-a593-44d3bc096aed.png)
+
 
 # Links
 Site: https://bg2398.github.io/Whats-the-weather-today/
